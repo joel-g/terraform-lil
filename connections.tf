@@ -11,9 +11,13 @@ provider "aws" {
 
 # TF-UPGRADE-TODO: Block type was not recognized, so this block and its contents were not automatically upgraded.
 provider "azurerm" {
-  subscription_id = "0"
-  client_id       = "1"
-  client_secret   = "2"
-  tenant_id       = "3"
+  subscription_id = "${var.az_subscription_id}"
+  client_id       = "${var.az_client_id}"
+  client_secret   = "${var.az_client_secret}"
+  tenant_id       = "${var.az_tenant_id}"
 }
 
+variable az_subscription_id {}
+variable az_client_id {}
+variable az_client_secret {}
+variable az_tenant_id {}
