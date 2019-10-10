@@ -4,12 +4,11 @@ provider "google" {
   region      = "us-west1"
 }
 
-# TF-UPGRADE-TODO: Block type was not recognized, so this block and its contents were not automatically upgraded.
+
 provider "aws" {
   region = "us-west-2"
 }
 
-# TF-UPGRADE-TODO: Block type was not recognized, so this block and its contents were not automatically upgraded.
 provider "azurerm" {
   subscription_id = "${var.az_subscription_id}"
   client_id       = "${var.az_client_id}"
